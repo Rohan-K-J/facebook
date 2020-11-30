@@ -1,0 +1,756 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>facebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel = "icon" href="https://lh3.googleusercontent.com/ccWDU4A7fX1R24v-vvT480ySh26AYp97g1VrIB_FIdjRcuQB2JP2WdY7h_wVVAeSpg"> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    
+  overflow: hidden;
+  background-color: #3366ff;
+}
+
+.topnav a {
+
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 11px 11px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #002699;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #002699;
+  color: white;
+}
+.topnav a.active1 {
+  background-color: #3366ff;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding-left: 1px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+ display: table;
+  
+}
+.space{
+    background-color: grey;
+}
+</style>
+<style>
+
+#myImg {
+  border-radius: 10px;
+   border: 5px solid #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+#myImg2 {
+  border-radius: 10px;
+   border: 5px solid #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg2:hover {opacity: 0.7;}
+#myImg3 {
+  border-radius: 10px;
+   border: 5px solid #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg3:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 10px;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+.stories{
+     text-decoration: underline overline;
+     padding-left:20px;
+}
+.avatar {
+  vertical-align: middle;
+  padding-left:7px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+}
+.head{
+  border-radius:25%;
+  
+width:250px;    
+}
+
+#photos{
+    margin-left:160px;
+}
+@media only screen and (max-width: 600px){
+  #photos{
+    margin-left:140px;
+}
+.head{
+  border-radius:25%;
+  margin-left:0px;
+
+width:250px;    
+}
+}
+.header1 {
+    
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+
+</style>
+<style>
+    *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  background-color:#e9ebee;
+}
+
+.f-card {
+  background-color:white;
+  /*height:400px;*/
+  width:502px;
+  border: 1px solid #d0d1d5;
+  border-radius:3px;
+  margin: auto;
+  margin-bottom:10px;
+  padding: 12px; 
+  
+  box-shadow: 0 0 5px rgba(0, 0, 0, .30); /* Not original, just a test */
+}
+
+.header {
+  margin-bottom:17px;
+}
+
+.co-logo {
+  /*display:block;*/
+  float:left;
+  margin-right:8px;
+  
+  width:40px;
+  height:40px;
+}
+
+.co-name > a {
+  font-family: Helvetica;
+  font-size:14px;
+  font-weight: bold;
+  line-height: 1.38;
+  color: #365899;
+  text-decoration:none;
+  
+  margin-bottom:2px;
+}
+
+.co-name > a:hover {
+  text-decoration:underline;
+}
+
+.time {
+  font-family: Helvetica;
+  font-size:12px;
+  color: #90949c;
+}
+
+.time > a {
+  color: #90949c;
+  text-decoration:none;
+}
+
+.time > a:hover {
+  text-decoration:underline;
+}
+
+.options {
+  font-family: Helvetica;
+  font-size:12px;
+  color: #e5e5e5;
+  float:right;
+}
+
+.options:hover {
+  color: black; /* Fallback */
+  color: rgba(0, 0, 0, .30);
+}
+
+.content {
+  clear:both;
+  font-family: Helvetica, sans-serif;
+  font-size:14px;
+  line-height: 1.38;
+}
+
+.reference {
+  width:476px;
+}
+.reference-thumb {
+  display:block;
+  width:476px;
+  height:249px;
+}
+
+.reference-content {
+  border: 2px solid black;
+  border: 2px solid rgba(0, 0, 0, .1);
+  border-top: 0;
+  padding: 10px 12px 10px 12px;
+}
+
+.reference:hover .reference-content {
+  border-color: black; /* Fallback */
+  border-color: rgba(0, 0, 0, .15);
+}
+
+.reference-title {
+  font-family: Georgia;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  
+  margin-bottom:5px;
+}
+
+.reference-subtitle {
+  font-family: Helvetica;
+  font-size:12px;
+  line-height: 16px; 
+}
+
+.reference-font {
+  color: #90949c;
+  font-family: Helvetica;
+  font-size: 11px;
+  line-height: 11px;
+  text-transform: uppercase;
+
+  padding-top:9px; 
+}
+
+.social {
+  margin-top:12px;
+}
+.social-buttons {
+  color: #7f7f7f;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight:bold;
+  line-height:14px;
+  
+  border-top:1px solid #e5e5e5;
+  padding-top:4px;
+  
+}
+
+.social-buttons span {
+  font-size: 12px;
+  margin-right:20px;
+  padding:4px 4px 4px 0;
+}
+
+.social-buttons span:hover {
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.social-buttons span i {
+  padding-right:4px;
+}
+      
+</style>
+<style>
+body {
+ margin:0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.container2 {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+ max-width: 1000px;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container2::after {
+  content: "";
+  clear: both;
+  display: table;
+  max-width: 1000px;
+}
+
+.container2 img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container2 img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.table{
+    width:100%;
+   margin-left: 200px;
+  margin-right:100px;
+        }
+      
+</style>
+<style>
+    .iframe{
+        margin-left:180px;
+        border:none;
+    }
+</style>
+
+</head>
+<body>
+ <div class="fixed">   
+<div class="header1" id="myHeader1">
+<div class="topnav" id="myTopnav">
+    <a href="#home" class="active1"><font size="4"><b>facebook</b></font></a>
+   <a href="#home" class="active1">                     </a>
+   <a href="#home" class="active1">                     </a>
+   <a href="#home" class="active1">                     </a>
+ 
+ <a href="#home" class="active"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="#news"><i class="fa fa-fw fa-user"></i>Contacts</a>
+  <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Messenger</a>
+  <a href="#about"><i class="fa fa-fw fa-bell"></i>Notification</a>
+  <a href="#about"><i class="fa fa-fw fa-search"></i>Search</a>
+  <a href="#about"><i class="fa fa-fw fa-bars"></i>Menu</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div></div></div><br>
+<div class="row">
+<div class="column"> <img src="avatar.png" alt="Avatar" class="avatar"></div>
+
+<div class="column"><input type="text" class="head" style="font-size: 12pt;" placeholder="  What's on your mind?"></input></div>
+
+<div class="column"><i class="fa fa-fw fa-image" id="photos"> Photos</i></div></div>
+<div class="space">
+    <p><font color="grey">
+     -----------------------------------------------------------------------   
+</font></p>
+</div>
+<div class="row">
+    <h3><font class="stories" ><b>STORIES</b></font></h3>
+  <div class="column">
+    <img id="myImg" src="CAKE.jpg" alt="AKASH" style="width:90%;min-width:50px;height:170px;margin-left:15px;">
+  </div>
+  <div class="column">
+    <img id="myImg2" src="BIRIYANI.jpg" alt="RAM" style="width:90%;min-width:50px;height:170px;margin-left:15px;">
+  </div>
+  <div class="column">
+    <img id="myImg3" src="BAKE.jpg" alt="MANOJ" style="width:90%;min-width:50px;height:170px;margin-left:15px;">
+  </div>
+
+</div>
+<div class="space">
+    <p><font color="grey">
+     -----------------------------------------------------------------------   
+</font></p>
+</div>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<div class="row">
+<div class="column">
+
+
+
+<div class="f-card">
+  <div class="header">
+    <div class="options"><i class="fa fa-chevron-down"></i></div>
+    <img class="co-logo" src="tech.png" />
+    <div class="co-name"><a href="businessinsider.com">Tech Insider</a></div>
+    <div class="time"><a href="#">2hrs</a> � <i class="fa fa-globe"></i></div>
+  </div>
+  <div class="content">
+    <p>Facebook has said it wants to take a slow and cautious approach to returning workers to its offices.</p>
+  </div>
+
+  <div class="reference">
+    <img class="reference-thumb" src="facebook.png" />
+    <div class="reference-content">
+      <div class="reference-title"><a href="businessinsider.com">BUSINESSINSIDER.COM</a></div>
+      <div class="reference-subtitle">Facebook says it will reopens offices in uly, but employees can continue to work from home for the next 6 months.</div>
+      <div class="reference-font"></div>
+    </div>
+  </div>
+  <div class="social">
+    <div class="social-content"></div>
+    <div class="social-buttons">
+      <span><i class="fa fa-thumbs-up"></i>Like</span>
+      <span><i class="fa fa-comment"></i>Comment</span>
+      <span><i class="fa fa-share"></i>Share</span></div>
+  </div>
+</div>
+
+<div class="f-card">
+  <div class="header">
+    <div class="options"><i class="fa fa-chevron-down"></i></div>
+    <img class="co-logo" src="udemylogo.png" />
+    <div class="co-name"><a href="www.udemy.com">Udemy</a></div>
+    <div class="time"><a href="#">9May 18:32</a> � <i class="fa fa-globe"></i></div>
+  </div>
+  <div class="content">
+    <p>ICYMI:all of our courses are oon sale through May 14.Amplify your skills here:</p>
+  </div>
+
+  <div class="reference">
+    <img class="reference-thumb" src="UDEMY.png" />
+    <div class="reference-content">
+      <div class="reference-title"> <a href="www.udemy.com">www.udemy.com</a></div>
+      <div class="reference-subtitle"></div>
+      <div class="reference-font"></div>
+    </div>
+  </div>
+  <div class="social">
+    <div class="social-content"></div>
+    <div class="social-buttons">
+      <span><i class="fa fa-thumbs-up"></i>Like</span>
+      <span><i class="fa fa-comment"></i>Comment</span>
+      <span><i class="fa fa-share"></i>Share</span></div>
+  </div>
+</div>
+<div class="f-card">
+  <div class="header">
+    <div class="options"><i class="fa fa-chevron-down"></i></div>
+    <img class="co-logo" src="codeninjalogo.jpg" />
+    <div class="co-name"><a href="www.codingninjas.com">Coding Ninjas</a></div>
+    <div class="time"><a href="#">Sponcored</a> � <i class="fa fa-globe"></i></div>
+  </div>
+  <div class="content">
+    <p>Learn the core Python skills from scratch and become eligible to apply for Python Developer positions at Google,Microsoft,Facebook and more.</p>
+  </div>
+
+  <div class="reference">
+    <img class="reference-thumb" src="cnpython.jpeg" />
+    <div class="reference-content">
+      <div class="reference-title"> <a href="www.codingninjas.com">Codingninjas.com</a></div>
+      <div class="reference-subtitle"><b>Python Course</b></div>
+      <div class="reference-font">Early Bird Discounts!</div>
+    </div>
+  </div>
+  <div class="social">
+    <div class="social-content"></div>
+    <div class="social-buttons">
+      <span><i class="fa fa-thumbs-up"></i>Like</span>
+      <span><i class="fa fa-comment"></i>Comment</span>
+      <span><i class="fa fa-share"></i>Share</span></div>
+  </div>
+</div>
+</div>
+<div class="column">
+    <iframe class="iframe" src="demo2.html" width="670px" height="700px"></iframe>
+<!--<table border="2" class="table">
+    <tr><th>
+        <div class="container2">
+  <img src="avatar.png" alt="Avatar" style="width:100%;">Manoj
+  <p>Hello. How are you today?</p>
+  <span class="time-left">11:00</span>
+</div>
+
+<div class="container2 darker">
+  <img src="avatar2.png" alt="Avatar" class="left" style="width:100%;">Akash
+  <p>Hey! I'm fine. Thanks for asking!</p>
+  <span class="time-left">11:01</span>
+</div>
+
+<div class="container2">
+  <img src="avatar3.png" alt="Avatar" style="width:100%;">Amith
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-left">11:02</span>
+</div>
+
+<div class="container2 darker">
+  <img src="avatar4.png" alt="Avatar" class="left" style="width:100%;">Cate
+  <p>Nah, Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
+<div class="container2">
+  <img src="avatar5.jpg" alt="Avatar" style="width:100%;">James
+  <p>Sweet! So, what do you wanna do today?</p>
+  <span class="time-left">11:02</span>
+</div>
+
+<div class="container2 darker">
+  <img src="avatar6.jpg" alt="Avatar" class="left" style="width:100%;">Cate
+  <p>Nah, Play soccer.. or learn more coding perhaps?</p>
+  <span class="time-left">11:05</span>
+</div>
+   </th> </tr>
+</table>-->
+</div></div>
+
+
+
+
+
+
+
+
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg2");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg3");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!--<script>
+window.onscroll = function() {myFunction1()};
+
+var header1 = document.getElementById("myHeader1");
+var sticky = header1.offsetTop;
+
+function myFunction1() {
+  if (window.pageYOffset > sticky) {
+    header1.classList.add("sticky");
+  } else {
+    header1.classList.remove("sticky");
+  }
+}
+</script>-->
+</body>
+</html>
